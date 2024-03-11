@@ -1,10 +1,13 @@
 # Speaker Attribution in Parliamentary Debates (GePaDe-SpkAtt)
 
 
-This repository contains the data and supplementary materials for the anonymous paper submission to LREC-COLING-2024:
+This repository contains the data and supplementary materials for the paper:
 
 ### Out of the mouths of MPs:
 ### Speaker Attribution in Parliamentary Debates
+
+(to be published at LREC-COLING-2024)
+
 
 ### Content of this repository:
 

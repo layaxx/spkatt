@@ -1,4 +1,5 @@
-# Speaker Attribution in Parliamentary Debates (GePaDe-SpkAtt)
+# Out of the mouths of MPs: Speaker Attribution in Parliamentary Debates
+## (GePaDe-SpkAtt Corpus)
 
 
 This repository contains the data and supplementary materials for our [LREC-COLING-2024 paper](https://github.com/umanlp/spkatt/blob/master/doc/GePaDe-SpkAtt-LREC-COLING-2024.pdf):
@@ -21,8 +22,6 @@ This repository contains the data and supplementary materials for our [LREC-COLI
 }
 ```
 
-### Out of the mouths of MPs:
-### Speaker Attribution in Parliamentary Debates
  
 
 ### Content of this repository:
@@ -61,6 +60,34 @@ The doc folder includes the paper, the annotation guidelines (in German) and the
 
 The system_output folder includes the system output (or dev and test sets) for the BERT-large model
 (see the description in the paper) for three independent runs with different initialisations (seeds: 8, 42, 313).
+
+You can use the evaluation script (data/eval.py) to evaluate the system output against the gold data:
+
+```
+python eval.py <gold filename> <system output filename>
+```
+
+### Model
+
+Our baseline model is the one of Conia & Navgili (2020):
+
+```
+Simone Conia and Roberto Navigli. 2020. Bridging the gap in multilingual semantic role labeling: a language-agnostic approach. In Proceedings of the 28th International Conference on Computational Linguistics, pages 1396–1410, Barcelona, Spain (Online). International Committee on Computational Linguistics.
+```
+
+[github](https://github.com/SapienzaNLP/multi-srl)
+
+To run the model, first download and install the SRL system. Follow the instructions provided on the authors' github page.
+
+Then download our pretrained [model for speaker attribution in parliamentary debates](https://data.dws.informatik.uni-mannheim.de/spkatt/model.tgz) 
+and put it in the XX folder.
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,2006 @@
+{
+   "candidates": {
+      "fragen": [
+         "speech"
+      ],
+      "Debatte": [
+         "speech"
+      ],
+      "Antwort": [
+         "speech"
+      ],
+      "Bestätigung": [
+         "speech"
+      ],
+      "beantragen": [
+         "speech"
+      ],
+      "Antragstext": [
+         "speech"
+      ],
+      "Beitrag": [
+         "speech"
+      ],
+      "aufzählen": [
+         "speech"
+      ],
+      "finden": [
+         "speech"
+      ],
+      "darstellen": [
+         "speech"
+      ],
+      "wiedergeben": [
+         "speech"
+      ],
+      "sagen": [
+         "speech"
+      ],
+      "leugnen": [
+         "speech"
+      ],
+      "formulieren": [
+         "speech"
+      ],
+      "verzerren": [
+         "speech"
+      ],
+      "glauben": [
+         "speech"
+      ],
+      "faseln": [
+         "speech"
+      ],
+      "beschließen": [
+         "speech"
+      ],
+      "Frage": [
+         "speech"
+      ],
+      "wiederholen": [
+         "speech"
+      ],
+      "Behauptung": [
+         "speech"
+      ],
+      "laut": [
+         "speech"
+      ],
+      "vortragen": [
+         "speech"
+      ],
+      "Auffassung": [
+         "speech"
+      ],
+      "Argument": [
+         "speech"
+      ],
+      "reden": [
+         "speech"
+      ],
+      "behaupten": [
+         "speech"
+      ],
+      "hören": [
+         "speech"
+      ],
+      "feststellen": [
+         "speech"
+      ],
+      "lehnen": [
+         "speech"
+      ],
+      "fassen": [
+         "speech"
+      ],
+      "begründen": [
+         "speech"
+      ],
+      "bedauern": [
+         "speech"
+      ],
+      "begrüßen": [
+         "speech"
+      ],
+      "Vertrag": [
+         "speech"
+      ],
+      "zeigen": [
+         "speech"
+      ],
+      "Abkommen": [
+         "speech"
+      ],
+      "verpflichten": [
+         "speech"
+      ],
+      "verhandeln": [
+         "speech"
+      ],
+      "Vertragswerk": [
+         "speech"
+      ],
+      "Verhandlung": [
+         "speech"
+      ],
+      "wissen": [
+         "speech"
+      ],
+      "beweisen": [
+         "speech"
+      ],
+      "verstehen": [
+         "speech"
+      ],
+      "erteilen": [
+         "speech"
+      ],
+      "sprechen": [
+         "speech"
+      ],
+      "bezeichnen": [
+         "speech"
+      ],
+      "meinen": [
+         "speech"
+      ],
+      "sehen": [
+         "speech"
+      ],
+      "bedenken": [
+         "speech"
+      ],
+      "vergegenwärtigen": [
+         "speech"
+      ],
+      "widersprechen": [
+         "speech"
+      ],
+      "beschreiben": [
+         "speech"
+      ],
+      "beschäftigen": [
+         "speech"
+      ],
+      "ausführen": [
+         "speech"
+      ],
+      "Vorschlag": [
+         "speech"
+      ],
+      "Antrag": [
+         "speech"
+      ],
+      "fordern": [
+         "speech"
+      ],
+      "eintreten": [
+         "speech"
+      ],
+      "Vereinbarung": [
+         "speech"
+      ],
+      "nennen": [
+         "speech"
+      ],
+      "verweisen": [
+         "speech"
+      ],
+      "freuen": [
+         "speech"
+      ],
+      "gehen": [
+         "speech"
+      ],
+      "debattieren": [
+         "speech"
+      ],
+      "Entscheidung": [
+         "speech"
+      ],
+      "festlegen": [
+         "speech"
+      ],
+      "machen": [
+         "speech"
+      ],
+      "aussprechen": [
+         "speech"
+      ],
+      "führen": [
+         "speech"
+      ],
+      "erwarten": [
+         "speech"
+      ],
+      "bitten": [
+         "speech"
+      ],
+      "bitte": [
+         "speech"
+      ],
+      "Gutachten": [
+         "speech"
+      ],
+      "vorlegen": [
+         "speech"
+      ],
+      "erklären": [
+         "speech"
+      ],
+      "Aussage": [
+         "speech"
+      ],
+      "zusagen": [
+         "speech"
+      ],
+      "träumen": [
+         "speech"
+      ],
+      "kommentieren": [
+         "speech"
+      ],
+      "Zwischenruf": [
+         "speech"
+      ],
+      "begrüß": [
+         "speech"
+      ],
+      "Angabe": [
+         "speech"
+      ],
+      "Beantragung": [
+         "speech"
+      ],
+      "aufgreifen": [
+         "speech"
+      ],
+      "Aussprache": [
+         "speech"
+      ],
+      "empfehlen": [
+         "speech"
+      ],
+      "ablehnen": [
+         "speech"
+      ],
+      "verlangen": [
+         "speech"
+      ],
+      "geben": [
+         "speech"
+      ],
+      "vorliegen": [
+         "speech"
+      ],
+      "aufrufen": [
+         "speech"
+      ],
+      "Verordnung": [
+         "speech"
+      ],
+      "Gesetz": [
+         "speech"
+      ],
+      "vorstellen": [
+         "speech"
+      ],
+      "Blitzgesetz": [
+         "speech"
+      ],
+      "Bitte": [
+         "speech"
+      ],
+      "Vorschrift": [
+         "speech"
+      ],
+      "anfordern": [
+         "speech"
+      ],
+      "beschweren": [
+         "speech"
+      ],
+      "zustimmen": [
+         "speech"
+      ],
+      "Glückwunsch": [
+         "speech"
+      ],
+      "erkennen": [
+         "speech"
+      ],
+      "Einwilligung": [
+         "speech"
+      ],
+      "entscheiden": [
+         "speech"
+      ],
+      "informieren": [
+         "speech"
+      ],
+      "tauschen": [
+         "speech"
+      ],
+      "Gesetzentwurf": [
+         "speech"
+      ],
+      "Versprechen": [
+         "speech"
+      ],
+      "Vorwurf": [
+         "speech"
+      ],
+      "mitteilen": [
+         "speech"
+      ],
+      "Beweisantrag": [
+         "speech"
+      ],
+      "Legaldefinition": [
+         "speech"
+      ],
+      "Beweisanträge": [
+         "speech"
+      ],
+      "Entwurf": [
+         "speech"
+      ],
+      "stellen": [
+         "speech"
+      ],
+      "Urteil": [
+         "speech"
+      ],
+      "denken": [
+         "speech"
+      ],
+      "sein": [
+         "speech"
+      ],
+      "stehen": [
+         "speech"
+      ],
+      "kritisieren": [
+         "speech"
+      ],
+      "teilen": [
+         "speech"
+      ],
+      "Gedanke": [
+         "speech"
+      ],
+      "Erklärung": [
+         "speech"
+      ],
+      "heißen": [
+         "speech"
+      ],
+      "akzeptieren": [
+         "speech"
+      ],
+      "Dankeschön": [
+         "speech"
+      ],
+      "Anhörung": [
+         "speech"
+      ],
+      "diskutieren": [
+         "speech"
+      ],
+      "haben": [
+         "speech"
+      ],
+      "wünschen": [
+         "speech"
+      ],
+      "loben": [
+         "speech"
+      ],
+      "erwähnen": [
+         "speech"
+      ],
+      "hoffen": [
+         "speech"
+      ],
+      "betonen": [
+         "speech"
+      ],
+      "bedanken": [
+         "speech"
+      ],
+      "bestätigen": [
+         "speech"
+      ],
+      "Tweet": [
+         "speech"
+      ],
+      "berichten": [
+         "speech"
+      ],
+      "lesen": [
+         "speech"
+      ],
+      "Forderung": [
+         "speech"
+      ],
+      "Überlegung": [
+         "speech"
+      ],
+      "ziehen": [
+         "speech"
+      ],
+      "hochstilisieren": [
+         "speech"
+      ],
+      "Stichwort": [
+         "speech"
+      ],
+      "stimmen": [
+         "speech"
+      ],
+      "Perspektive": [
+         "speech"
+      ],
+      "gehören": [
+         "speech"
+      ],
+      "mitentscheiden": [
+         "speech"
+      ],
+      "wahrnehmen": [
+         "speech"
+      ],
+      "Satz": [
+         "speech"
+      ],
+      "hinzufügen": [
+         "speech"
+      ],
+      "Anforderung": [
+         "speech"
+      ],
+      "nehmen": [
+         "speech"
+      ],
+      "Beschluss": [
+         "speech"
+      ],
+      "verbieten": [
+         "speech"
+      ],
+      "weisen": [
+         "speech"
+      ],
+      "versichern": [
+         "speech"
+      ],
+      "Zusage": [
+         "speech"
+      ],
+      "halten": [
+         "speech"
+      ],
+      "bekommen": [
+         "speech"
+      ],
+      "erinnern": [
+         "speech"
+      ],
+      "warnen": [
+         "speech"
+      ],
+      "zitieren": [
+         "speech"
+      ],
+      "Erlaubnis": [
+         "speech"
+      ],
+      "Rede": [
+         "speech"
+      ],
+      "klingen": [
+         "speech"
+      ],
+      "verbreiten": [
+         "speech"
+      ],
+      "Idee": [
+         "speech"
+      ],
+      "Traum": [
+         "speech"
+      ],
+      "beraten": [
+         "speech"
+      ],
+      "AfD-Antrag": [
+         "speech"
+      ],
+      "Ausspruch": [
+         "speech"
+      ],
+      "lauten": [
+         "speech"
+      ],
+      "Bestandsaufnahme": [
+         "speech"
+      ],
+      "Hinweis": [
+         "speech"
+      ],
+      "Kenntnis": [
+         "speech"
+      ],
+      "auseinandersetzt": [
+         "speech"
+      ],
+      "hinweisen": [
+         "speech"
+      ],
+      "Bemerkung": [
+         "speech"
+      ],
+      "Ausführung": [
+         "speech"
+      ],
+      "Vorlag": [
+         "speech"
+      ],
+      "vorschlagen": [
+         "speech"
+      ],
+      "Vorlage": [
+         "speech"
+      ],
+      "vorwegstellen": [
+         "speech"
+      ],
+      "Diskussion": [
+         "speech"
+      ],
+      "fahren": [
+         "speech"
+      ],
+      "Gefühl": [
+         "speech"
+      ],
+      "verzeichnen": [
+         "speech"
+      ],
+      "unterhalten": [
+         "speech"
+      ],
+      "Feststellung": [
+         "speech"
+      ],
+      "fallen": [
+         "speech"
+      ],
+      "Wort": [
+         "speech"
+      ],
+      "äußern": [
+         "speech"
+      ],
+      "positionieren": [
+         "speech"
+      ],
+      "nachdenken": [
+         "speech"
+      ],
+      "FDP-Antrag": [
+         "speech"
+      ],
+      "danken": [
+         "speech"
+      ],
+      "ansprechen": [
+         "speech"
+      ],
+      "Sicht": [
+         "speech"
+      ],
+      "dahinsagen": [
+         "speech"
+      ],
+      "Eindruck": [
+         "speech"
+      ],
+      "angesprochen": [
+         "speech"
+      ],
+      "appellieren": [
+         "speech"
+      ],
+      "kommen": [
+         "speech"
+      ],
+      "Dank": [
+         "speech"
+      ],
+      "antworten": [
+         "speech"
+      ],
+      "Klarstellung": [
+         "speech"
+      ],
+      "Begründung": [
+         "speech"
+      ],
+      "nachlesen": [
+         "speech"
+      ],
+      "urteilen": [
+         "speech"
+      ],
+      "vorschreiben": [
+         "speech"
+      ],
+      "Ansicht": [
+         "speech"
+      ],
+      "präsentieren": [
+         "speech"
+      ],
+      "vermitteln": [
+         "speech"
+      ],
+      "Auseinandersetzung": [
+         "speech"
+      ],
+      "bekennen": [
+         "speech"
+      ],
+      "erlauben": [
+         "speech"
+      ],
+      "Zwischenfrage": [
+         "speech"
+      ],
+      "rechtfertigen": [
+         "speech"
+      ],
+      "erhoffen": [
+         "speech"
+      ],
+      "Angebot": [
+         "speech"
+      ],
+      "INF-Vertrag": [
+         "speech"
+      ],
+      "Zustimmung": [
+         "speech"
+      ],
+      "drängen": [
+         "speech"
+      ],
+      "Disput": [
+         "speech"
+      ],
+      "schreiben": [
+         "speech"
+      ],
+      "Meinung": [
+         "speech"
+      ],
+      "bilden": [
+         "speech"
+      ],
+      "einbringen": [
+         "speech"
+      ],
+      "Botschaft": [
+         "speech"
+      ],
+      "suggerieren": [
+         "speech"
+      ],
+      "Erkenntnis": [
+         "speech"
+      ],
+      "thematisieren": [
+         "speech"
+      ],
+      "adressieren": [
+         "speech"
+      ],
+      "eingehen": [
+         "speech"
+      ],
+      "Vorzuleg": [
+         "speech"
+      ],
+      "Aufschrei": [
+         "speech"
+      ],
+      "vernehmen": [
+         "speech"
+      ],
+      "legen": [
+         "speech"
+      ],
+      "erinneren": [
+         "speech"
+      ],
+      "Überzeugung": [
+         "speech"
+      ],
+      "Medienzitate": [
+         "speech"
+      ],
+      "Gespräch": [
+         "speech"
+      ],
+      "vermuten": [
+         "speech"
+      ],
+      "verweise": [
+         "speech"
+      ],
+      "greifen": [
+         "speech"
+      ],
+      "zeichnen": [
+         "speech"
+      ],
+      "verschweigen": [
+         "speech"
+      ],
+      "verraten": [
+         "speech"
+      ],
+      "erkläre": [
+         "speech"
+      ],
+      "Kritik": [
+         "speech"
+      ],
+      "Kurzintervention": [
+         "speech"
+      ],
+      "festschreiben": [
+         "speech"
+      ],
+      "reklamieren": [
+         "speech"
+      ],
+      "aufzuzeigen": [
+         "speech"
+      ],
+      "beleuchten": [
+         "speech"
+      ],
+      "wussen": [
+         "speech"
+      ],
+      "schrei": [
+         "speech"
+      ],
+      "diffamieren": [
+         "speech"
+      ],
+      "Regierungserklärung": [
+         "speech"
+      ],
+      "Position": [
+         "speech"
+      ],
+      "Sachstandsbericht": [
+         "speech"
+      ],
+      "plädieren": [
+         "speech"
+      ],
+      "Gedacht": [
+         "speech"
+      ],
+      "melden": [
+         "speech"
+      ],
+      "rügen": [
+         "speech"
+      ],
+      "anmahnen": [
+         "speech"
+      ],
+      "Lüge": [
+         "speech"
+      ],
+      "Urteilsspruch": [
+         "speech"
+      ],
+      "anstreben": [
+         "speech"
+      ],
+      "hetzen": [
+         "speech"
+      ],
+      "Zitat": [
+         "speech"
+      ],
+      "bestimmen": [
+         "speech"
+      ],
+      "Wissen": [
+         "speech"
+      ],
+      "Ausrede": [
+         "speech"
+      ],
+      "befürchten": [
+         "speech"
+      ],
+      "einräumen": [
+         "speech"
+      ],
+      "aufzeigen": [
+         "speech"
+      ],
+      "Beratung": [
+         "speech"
+      ],
+      "erzählen": [
+         "speech"
+      ],
+      "räumen": [
+         "speech"
+      ],
+      "werben": [
+         "speech"
+      ],
+      "formuliert": [
+         "speech"
+      ],
+      "benennen": [
+         "speech"
+      ],
+      "Grundidee": [
+         "speech"
+      ],
+      "versprechen": [
+         "speech"
+      ],
+      "Haltung": [
+         "speech"
+      ],
+      "Dokumentation": [
+         "speech"
+      ],
+      "Wortprotokolle": [
+         "speech"
+      ],
+      "notieren": [
+         "speech"
+      ],
+      "aufgezeichnen": [
+         "speech"
+      ],
+      "zuhören": [
+         "speech"
+      ],
+      "nachweisen": [
+         "speech"
+      ],
+      "Hetze": [
+         "speech"
+      ],
+      "verteidigen": [
+         "speech"
+      ],
+      "wussten": [
+         "speech"
+      ],
+      "Bekundung": [
+         "speech"
+      ],
+      "Befangenheitsablehnung": [
+         "speech"
+      ],
+      "Zurückweisung": [
+         "speech"
+      ],
+      "Diktum": [
+         "speech"
+      ],
+      "aufzeichnen": [
+         "speech"
+      ],
+      "festhalten": [
+         "speech"
+      ],
+      "Billigen": [
+         "speech"
+      ],
+      "herausverlangen": [
+         "speech"
+      ],
+      "erfragen": [
+         "speech"
+      ],
+      "nachvollziehen": [
+         "speech"
+      ],
+      "Kommentar": [
+         "speech"
+      ],
+      "nach": [
+         "speech"
+      ],
+      "Äußerung": [
+         "speech"
+      ],
+      "Vermutung": [
+         "speech"
+      ],
+      "Unterstellung": [
+         "speech"
+      ],
+      "zurückkommen": [
+         "speech"
+      ],
+      "vertreten": [
+         "speech"
+      ],
+      "werden": [
+         "speech"
+      ],
+      "Kommunikation": [
+         "speech"
+      ],
+      "dargetan": [
+         "speech"
+      ],
+      "jubeln": [
+         "speech"
+      ],
+      "Rückmeldung": [
+         "speech"
+      ],
+      "aussagen": [
+         "speech"
+      ],
+      "beleidigen": [
+         "speech"
+      ],
+      "vorgaukeln": [
+         "speech"
+      ],
+      "rufen": [
+         "speech"
+      ],
+      "krakeelen": [
+         "speech"
+      ],
+      "Nachricht": [
+         "speech"
+      ],
+      "Volksverhetzung": [
+         "speech"
+      ],
+      "Vorstellung": [
+         "speech"
+      ],
+      "vorkommen": [
+         "speech"
+      ],
+      "Widerspruch": [
+         "speech"
+      ],
+      "einfordern": [
+         "speech"
+      ],
+      "anhören": [
+         "speech"
+      ],
+      "Bericht": [
+         "speech"
+      ],
+      "vereinbaren": [
+         "speech"
+      ],
+      "für": [
+         "speech"
+      ],
+      "Hoffnung": [
+         "speech"
+      ],
+      "erläutern": [
+         "speech"
+      ],
+      "Beschluß": [
+         "speech"
+      ],
+      "mahnen": [
+         "speech"
+      ],
+      "Videokonferenz": [
+         "speech"
+      ],
+      "Bekenntnis": [
+         "speech"
+      ],
+      "Sonntagsreden": [
+         "speech"
+      ],
+      "anordnen": [
+         "speech"
+      ],
+      "Lese": [
+         "speech"
+      ],
+      "Beleidigung": [
+         "speech"
+      ],
+      "Morddrohung": [
+         "speech"
+      ],
+      "anfragen": [
+         "speech"
+      ],
+      "Referentenentwurf": [
+         "speech"
+      ],
+      "abstreien": [
+         "speech"
+      ],
+      "diskreditieren": [
+         "speech"
+      ],
+      "herausgeben": [
+         "speech"
+      ],
+      "trösten": [
+         "speech"
+      ],
+      "aussagt": [
+         "speech"
+      ],
+      "unterstellen": [
+         "speech"
+      ],
+      "Ausländer": [
+         "speech"
+      ],
+      "bescheinigen": [
+         "speech"
+      ],
+      "vorwegschicken": [
+         "speech"
+      ],
+      "Strafkammerbericht": [
+         "speech"
+      ],
+      "Befangenheitsantrag": [
+         "speech"
+      ],
+      "Besetzungsrüg": [
+         "speech"
+      ],
+      "prognostizieren": [
+         "speech"
+      ],
+      "Oppositionsantrag": [
+         "speech"
+      ],
+      "Videoaufzeichnung": [
+         "speech"
+      ],
+      "Fazit": [
+         "speech"
+      ],
+      "Auge": [
+         "speech"
+      ],
+      "ausdrücken": [
+         "speech"
+      ],
+      "bestreiten": [
+         "speech"
+      ],
+      "verkünden": [
+         "speech"
+      ],
+      "unterzeichnen": [
+         "speech"
+      ],
+      "Appell": [
+         "speech"
+      ],
+      "Lesung": [
+         "speech"
+      ],
+      "ausreden": [
+         "speech"
+      ],
+      "belegen": [
+         "speech"
+      ],
+      "argumentieren": [
+         "speech"
+      ],
+      "verheißen": [
+         "speech"
+      ],
+      "Lesen": [
+         "speech"
+      ],
+      "besprechen": [
+         "speech"
+      ],
+      "Ablehnung": [
+         "speech"
+      ],
+      "ausgehen": [
+         "speech"
+      ],
+      "verwundern": [
+         "speech"
+      ],
+      "Beschreibung": [
+         "speech"
+      ],
+      "bemerken": [
+         "speech"
+      ],
+      "Meisterbrief": [
+         "speech"
+      ],
+      "darlegen": [
+         "speech"
+      ],
+      "ergänzen": [
+         "speech"
+      ],
+      "Entwürf": [
+         "speech"
+      ],
+      "Allmachtsfantasie": [
+         "speech"
+      ],
+      "betreiben": [
+         "speech"
+      ],
+      "erlassen": [
+         "speech"
+      ],
+      "wundern": [
+         "speech"
+      ],
+      "definieren": [
+         "speech"
+      ],
+      "Postings": [
+         "speech"
+      ],
+      "schlechtzureden": [
+         "speech"
+      ],
+      "beantworten": [
+         "speech"
+      ],
+      "Wunder": [
+         "speech"
+      ],
+      "bringen": [
+         "speech"
+      ],
+      "Meldung": [
+         "speech"
+      ],
+      "anmerken": [
+         "speech"
+      ],
+      "Anmerkung": [
+         "speech"
+      ],
+      "Argumentiert": [
+         "speech"
+      ],
+      "Verbot": [
+         "speech"
+      ],
+      "Erzählung": [
+         "speech"
+      ],
+      "Bedenken": [
+         "speech"
+      ],
+      "Angesprochen": [
+         "speech"
+      ],
+      "anschließen": [
+         "speech"
+      ],
+      "Kompliment": [
+         "speech"
+      ],
+      "Ankündigung": [
+         "speech"
+      ],
+      "Erwartung": [
+         "speech"
+      ],
+      "warn": [
+         "speech"
+      ],
+      "anbieten": [
+         "speech"
+      ],
+      "erachten": [
+         "speech"
+      ],
+      "Jamaika-Gesprächen": [
+         "speech"
+      ],
+      "verabreden": [
+         "speech"
+      ],
+      "Lob": [
+         "speech"
+      ],
+      "überlegen": [
+         "speech"
+      ],
+      "treffen": [
+         "speech"
+      ],
+      "singen": [
+         "speech"
+      ],
+      "kriegen": [
+         "speech"
+      ],
+      "hinterfragen": [
+         "speech"
+      ],
+      "Lippenbekenntnis": [
+         "speech"
+      ],
+      "klarmachen": [
+         "speech"
+      ],
+      "Sondierungsgespräch": [
+         "speech"
+      ],
+      "vorgegaukeln": [
+         "speech"
+      ],
+      "Aufzählung": [
+         "speech"
+      ],
+      "demonstrieren": [
+         "speech"
+      ],
+      "veröffentlichen": [
+         "speech"
+      ],
+      "verlieren": [
+         "speech"
+      ],
+      "Anordnung": [
+         "speech"
+      ],
+      "besagen": [
+         "speech"
+      ],
+      "verhöhnen": [
+         "speech"
+      ],
+      "Glaube": [
+         "speech"
+      ],
+      "zusammengefasst": [
+         "speech"
+      ],
+      "Leitgedanke": [
+         "speech"
+      ],
+      "streiten": [
+         "speech"
+      ],
+      "dagegensprechen": [
+         "speech"
+      ],
+      "gelogen": [
+         "speech"
+      ],
+      "Nachverhandel": [
+         "speech"
+      ],
+      "Grenzwertdiskussion": [
+         "speech"
+      ],
+      "ankündigen": [
+         "speech"
+      ],
+      "zugeben": [
+         "speech"
+      ],
+      "bejubeln": [
+         "speech"
+      ],
+      "Verständnis": [
+         "speech"
+      ],
+      "beistandsversprechen": [
+         "speech"
+      ],
+      "zweifeln": [
+         "speech"
+      ],
+      "Zweifel": [
+         "speech"
+      ],
+      "Beistandsversprechen": [
+         "speech"
+      ],
+      "jammern": [
+         "speech"
+      ],
+      "werfen": [
+         "speech"
+      ],
+      "vorzuhaln": [
+         "speech"
+      ],
+      "uns": [
+         "speech"
+      ],
+      "Verständigung": [
+         "speech"
+      ],
+      "empfinden": [
+         "speech"
+      ],
+      "auseinandersetzen": [
+         "speech"
+      ],
+      "nachfragen": [
+         "speech"
+      ],
+      "anprangern": [
+         "speech"
+      ],
+      "Balkonreden": [
+         "speech"
+      ],
+      "niederlegen": [
+         "speech"
+      ],
+      "raten": [
+         "speech"
+      ],
+      "schlagen": [
+         "speech"
+      ],
+      "angerissen": [
+         "speech"
+      ],
+      "Absprache": [
+         "speech"
+      ],
+      "Darstellung": [
+         "speech"
+      ],
+      "Wunsch": [
+         "speech"
+      ],
+      "beschwören": [
+         "speech"
+      ],
+      "überzeugen": [
+         "speech"
+      ],
+      "berufen": [
+         "speech"
+      ],
+      "hervorheben": [
+         "speech"
+      ],
+      "Mussvorschrift": [
+         "speech"
+      ],
+      "Sollvorschrift": [
+         "speech"
+      ],
+      "Kannvorschrift": [
+         "speech"
+      ],
+      "Beweisanträg": [
+         "speech"
+      ],
+      "liegen": [
+         "speech"
+      ],
+      "zusammenfassen": [
+         "speech"
+      ],
+      "überdenken": [
+         "speech"
+      ],
+      "vorwerfen": [
+         "speech"
+      ],
+      "Schönfärberei": [
+         "speech"
+      ],
+      "Streit": [
+         "speech"
+      ],
+      "anklagen": [
+         "speech"
+      ],
+      "Hetztiraden": [
+         "speech"
+      ],
+      "verhetzen": [
+         "speech"
+      ],
+      "vorzuwerfen": [
+         "speech"
+      ],
+      "Argumentation": [
+         "speech"
+      ],
+      "Einschätzung": [
+         "speech"
+      ],
+      "Propaganda": [
+         "speech"
+      ],
+      "Spekulation": [
+         "speech"
+      ],
+      "verständigen": [
+         "speech"
+      ],
+      "Betonung": [
+         "speech"
+      ],
+      "Annahme": [
+         "speech"
+      ],
+      "beantragt": [
+         "speech"
+      ],
+      "vorhalten": [
+         "speech"
+      ],
+      "abhoben": [
+         "speech"
+      ],
+      "befinden": [
+         "speech"
+      ],
+      "spekulieren": [
+         "speech"
+      ],
+      "bejahen": [
+         "speech"
+      ],
+      "Befürchtung": [
+         "speech"
+      ],
+      "erwecken": [
+         "speech"
+      ],
+      "titeln": [
+         "speech"
+      ],
+      "vor": [
+         "speech"
+      ],
+      "einigen": [
+         "speech"
+      ],
+      "ermutigen": [
+         "speech"
+      ],
+      "mitdenken": [
+         "speech"
+      ],
+      "fürchten": [
+         "speech"
+      ],
+      "Erinnerung": [
+         "speech"
+      ],
+      "unterschreiben": [
+         "speech"
+      ],
+      "Beobachtung": [
+         "speech"
+      ],
+      "Stellungnahme": [
+         "speech"
+      ],
+      "drohen": [
+         "speech"
+      ],
+      "beleidigend": [
+         "speech"
+      ],
+      "bedrohen": [
+         "speech"
+      ],
+      "Nachrede": [
+         "speech"
+      ],
+      "präzisieren": [
+         "speech"
+      ],
+      "Schlagen": [
+         "speech"
+      ],
+      "herauszuverlangen": [
+         "speech"
+      ],
+      "erfahren": [
+         "speech"
+      ],
+      "zurufen": [
+         "speech"
+      ],
+      "herumsprechen": [
+         "speech"
+      ],
+      "so": [
+         "speech"
+      ],
+      "übersetzen": [
+         "speech"
+      ],
+      "bemängeln": [
+         "speech"
+      ],
+      "befragen": [
+         "speech"
+      ],
+      "bieten": [
+         "speech"
+      ],
+      "auffordern": [
+         "speech"
+      ],
+      "belügen": [
+         "speech"
+      ],
+      "Danke": [
+         "speech"
+      ],
+      "befürworten": [
+         "speech"
+      ],
+      "Positionierung": [
+         "speech"
+      ],
+      "gestehen": [
+         "speech"
+      ],
+      "annehmen": [
+         "speech"
+      ],
+      "Anfrage": [
+         "speech"
+      ],
+      "Aufforderung": [
+         "speech"
+      ],
+      "einschätzen": [
+         "speech"
+      ],
+      "anordnet": [
+         "speech"
+      ],
+      "Anweisung": [
+         "speech"
+      ],
+      "Strafanzeige": [
+         "speech"
+      ],
+      "dank": [
+         "speech"
+      ],
+      "aufgeführt": [
+         "speech"
+      ],
+      "Ermahnung": [
+         "speech"
+      ],
+      "kommunizieren": [
+         "speech"
+      ],
+      "Aufklärung": [
+         "speech"
+      ],
+      "Interpretation": [
+         "speech"
+      ],
+      "Abmahnung": [
+         "speech"
+      ],
+      "rekapitulieren": [
+         "speech"
+      ],
+      "kolportieren": [
+         "speech"
+      ],
+      "erkundigen": [
+         "speech"
+      ],
+      "Dialog": [
+         "speech"
+      ],
+      "Diskutiert": [
+         "speech"
+      ],
+      "Zwischenfrag": [
+         "speech"
+      ],
+      "Stimme": [
+         "speech"
+      ],
+      "Bundestagsdebatte": [
+         "speech"
+      ],
+      "übereinstimmen": [
+         "speech"
+      ],
+      "Grundsatzdebatt": [
+         "speech"
+      ],
+      "Belehrung": [
+         "speech"
+      ],
+      "aushandeln": [
+         "speech"
+      ],
+      "abgeben": [
+         "speech"
+      ],
+      "klarstellen": [
+         "speech"
+      ],
+      "richten": [
+         "speech"
+      ],
+      "GroKo-Vertrag": [
+         "speech"
+      ],
+      "protestieren": [
+         "speech"
+      ],
+      "Protest": [
+         "speech"
+      ],
+      "Bezichtigung": [
+         "speech"
+      ],
+      "lügen": [
+         "speech"
+      ],
+      "aufgeschrieben": [
+         "speech"
+      ],
+      "illustrieren": [
+         "speech"
+      ],
+      "beweis": [
+         "speech"
+      ],
+      "verinnerlich": [
+         "speech"
+      ],
+      "Ankündig": [
+         "speech"
+      ],
+      "Legen": [
+         "speech"
+      ],
+      "Streite": [
+         "speech"
+      ],
+      "beklagen": [
+         "speech"
+      ],
+      "Redebeitrag": [
+         "speech"
+      ],
+      "kleinreden": [
+         "speech"
+      ],
+      "wunderen": [
+         "speech"
+      ],
+      "androh": [
+         "speech"
+      ],
+      "Drohung": [
+         "speech"
+      ],
+      "interpretieren": [
+         "speech"
+      ],
+      "Prognose": [
+         "speech"
+      ],
+      "Grenzdebatt": [
+         "speech"
+      ],
+      "verharmlosen": [
+         "speech"
+      ],
+      "zuzuhören": [
+         "speech"
+      ],
+      "Absage": [
+         "speech"
+      ],
+      "Begründunge": [
+         "speech"
+      ],
+      "Falschmeldung": [
+         "speech"
+      ],
+      "Skepsis": [
+         "speech"
+      ],
+      "Fragestellung": [
+         "speech"
+      ],
+      "Schreiben": [
+         "speech"
+      ],
+      "wenden": [
+         "speech"
+      ],
+      "Koalitionsverhandlung": [
+         "speech"
+      ],
+      "Evaluierungsbericht": [
+         "speech"
+      ],
+      "Austausch": [
+         "speech"
+      ],
+      "bekräftigen": [
+         "speech"
+      ],
+      "gratulieren": [
+         "speech"
+      ],
+      "skizzieren": [
+         "speech"
+      ],
+      "besprech": [
+         "speech"
+      ],
+      "ansprech": [
+         "speech"
+      ],
+      "aufkommen": [
+         "speech"
+      ],
+      "durchführen": [
+         "speech"
+      ],
+      "Erörterung": [
+         "speech"
+      ],
+      "zurückweisen": [
+         "speech"
+      ],
+      "Zwei-plus-Vier-Vertrag": [
+         "speech"
+      ],
+      "PESCO-Vertrag": [
+         "speech"
+      ],
+      "beteiligen": [
+         "speech"
+      ],
+      "Nachdenkt": [
+         "speech"
+      ],
+      "Rumschreit": [
+         "speech"
+      ],
+      "Haushaltsdebatte": [
+         "speech"
+      ],
+      "anbringen": [
+         "speech"
+      ],
+      "Erziehungsgedanken": [
+         "speech"
+      ],
+      "untersagen": [
+         "speech"
+      ],
+      "ausformulieren": [
+         "speech"
+      ],
+      "äußeren": [
+         "speech"
+      ],
+      "ausdiskutiert": [
+         "speech"
+      ],
+      "Beschwichtigung": [
+         "speech"
+      ],
+      "Beschönigung": [
+         "speech"
+      ],
+      "drinstehen": [
+         "speech"
+      ],
+      "anflehen": [
+         "speech"
+      ],
+      "Verkündung": [
+         "speech"
+      ],
+      "Fachgespräch": [
+         "speech"
+      ],
+      "Aussetzung": [
+         "speech"
+      ],
+      "Unterbrechungsantrag": [
+         "speech"
+      ],
+      "verlesen": [
+         "speech"
+      ],
+      "hineinschreiben": [
+         "speech"
+      ],
+      "anspiel": [
+         "speech"
+      ],
+      "Androhung": [
+         "speech"
+      ],
+      "üben": [
+         "speech"
+      ],
+      "Regelung": [
+         "speech"
+      ],
+      "merken": [
+         "speech"
+      ],
+      "vorlesen": [
+         "speech"
+      ],
+      "bekannt": [
+         "speech"
+      ],
+      "schildern": [
+         "speech"
+      ],
+      "BAMF-Bescheide": [
+         "speech"
+      ],
+      "bezweifeln": [
+         "speech"
+      ],
+      "antreten": [
+         "speech"
+      ],
+      "Schlussfolgerung": [
+         "speech"
+      ],
+      "zusichern": [
+         "speech"
+      ],
+      "Versprechung": [
+         "speech"
+      ],
+      "ahnen": [
+         "speech"
+      ],
+      "abqualifiziert": [
+         "speech"
+      ],
+      "bezweifle": [
+         "speech"
+      ],
+      "dazwischenschreien": [
+         "speech"
+      ],
+      "anzweifeln": [
+         "speech"
+      ],
+      "verneinen": [
+         "speech"
+      ],
+      "hineinreden": [
+         "speech"
+      ],
+      "angezweifelt": [
+         "speech"
+      ],
+      "kaputtreden": [
+         "speech"
+      ],
+      "Darlegung": [
+         "speech"
+      ],
+      "philosophieren": [
+         "speech"
+      ],
+      "anschauen": [
+         "speech"
+      ],
+      "Randbemerkung": [
+         "speech"
+      ],
+      "beziehen": [
+         "speech"
+      ],
+      "dankbar": [
+         "speech"
+      ],
+      "stauner": [
+         "speech"
+      ],
+      "absprechen": [
+         "speech"
+      ],
+      "angestrebt": [
+         "speech"
+      ],
+      "Absicht": [
+         "speech"
+      ],
+      "beabsichtigen": [
+         "speech"
+      ],
+      "erörtern": [
+         "speech"
+      ],
+      "attackieren": [
+         "speech"
+      ],
+      "liefern": [
+         "speech"
+      ],
+      "einzubringen": [
+         "speech"
+      ],
+      "verweigern": [
+         "speech"
+      ],
+      "weigern": [
+         "speech"
+      ]
+   },
+   "roles": {
+      "<UNK>": 1,
+      "B-Addr": 2,
+      "B-Evidence": 12,
+      "B-Medium": 8,
+      "B-Message": 6,
+      "B-PTC": 14,
+      "B-Source": 3,
+      "B-Topic": 10,
+      "B-V": 5,
+      "I-Addr": 16,
+      "I-Evidence": 13,
+      "I-Medium": 9,
+      "I-Message": 7,
+      "I-PTC": 15,
+      "I-Source": 4,
+      "I-Topic": 11,
+      "I-V": 17,
+      "_": 0
+   },
+   "senses": {
+      "<UNK>": 1,
+      "_": 0,
+      "speech": 2
+   }
+}

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-SEED=8
+SEED=42
 
 export PYTHONPATH="$PWD" && \
 python scripts/training/trainer.py fit \

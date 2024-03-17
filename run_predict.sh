@@ -1,11 +1,11 @@
 #! /bin/bash
 
-SEED=8
+SEED=42
 
 export PYTHONPATH="$PWD" && \
 python scripts/training/trainer.py predict \
   --config configurations/large$SEED.yaml \
-  --ckpt_path /ceph/inrehbei/proj/srl-test/lightning_logs/spkatt_large-no-bio_seed8/checkpoints/epoch\=18-f1\=0.8322.ckpt
+  --ckpt_path models/spkatt_large_seed42/checkpoints/epoch\=25-f1\=0.8260.ckpt 
 
 
 

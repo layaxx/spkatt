@@ -1,5 +1,5 @@
 # Out of the mouths of MPs: Speaker Attribution in Parliamentary Debates
-## (GePaDe-SpkAtt Corpus)
+## GePaDe-SpkAtt Corpus
 
 
 This repository contains the data and supplementary materials for our [LREC-COLING-2024 paper](https://github.com/umanlp/spkatt/blob/master/doc/GePaDe-SpkAtt-LREC-COLING-2024.pdf):
@@ -114,7 +114,10 @@ To run the model, first download and install the SRL system. Follow the instruct
 Then download our pretrained [model for speaker attribution in parliamentary debates](https://data.dws.informatik.uni-mannheim.de/spkatt/spkatt_large_seed42.tgz), put it in the models folder and decompress it (`cd models; tar -xzf spkatt_large_seed42.tgz`).
 
 You can now use the model to predict speech events in unlabelled data. The input file should have the same format as the example file in 
-the folder `example/unlabelled_data.json`.
+the folder `example/unlabelled_data.json`. Please make sure to adapt the paths in the config file: 
+`pred_path` should point to the unlabelled input data and `predictions_path` is the path where the system outputs the predictions.
+
+
 
 
 

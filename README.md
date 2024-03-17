@@ -22,6 +22,17 @@ This repository contains the data and supplementary materials for our [LREC-COLI
 }
 ```
 
+### Abstract
+
+This paper presents GePaDeSpkAtt , a new corpus for speaker attribution in German parliamentary debates, with
+more than 7,700 manually annotated events of speech, thought and writing. Our role inventory includes the sources,
+addressees, messages and topics of the speech event and also two additional roles, medium and evidence. We
+report baseline results for the automatic prediction of speech events and their roles, with high scores for both, event
+triggers and roles. Then we apply our model to predict speech events in 20 years of parliamentary debates and
+investigate the use of factives in the rhetoric of MPs.
+
+![Speaker attribution example](docs/spkatt.png?raw=true "Speaker attribution in parliamentary debates.")
+
  
 
 ### Content of this repository:
@@ -84,11 +95,18 @@ python eval.py ../data/GePaDe/test.json test/pred_test_seed8.json
 Our baseline system is the one of Conia & Navgili (2020):
 
 ```
-Simone Conia and Roberto Navigli. 2020. Bridging the gap in
-multilingual semantic role labeling: a language-agnostic approach. 
-In Proceedings of the 28th International Conference on 
-Computational Linguistics, pages 1396–1410, Barcelona, Spain 
-(Online). International Committee on Computational Linguistics.
+@inproceedings{conia-navigli-2020-multilingual-srl,
+    title     = "Bridging the Gap in Multilingual {S}emantic {R}ole {L}abeling: {A} Language-Agnostic Approach",
+    author    = "Conia, Simone and Navigli, Roberto",
+    booktitle = "Proceedings of the 28th International Conference on Computational Linguistics, COLING 2020",
+    month     = dec,
+    year      = "2020",
+    address   = "Barcelona, Spain (Online)",
+    publisher = "International Committee on Computational Linguistics",
+    url       = "https://aclanthology.org/2020.coling-main.120",
+    doi       = "10.18653/v1/2020.coling-main.120",
+    pages     = "1396--1410",
+}
 ```
 
 To run the model, first download and install the SRL system. Follow the instructions provided on the authors' [github page](https://github.com/SapienzaNLP/multi-srl).

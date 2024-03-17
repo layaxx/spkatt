@@ -31,7 +31,7 @@ report baseline results for the automatic prediction of speech events and their 
 triggers and roles. Then we apply our model to predict speech events in 20 years of parliamentary debates and
 investigate the use of factives in the rhetoric of MPs.
 
-![Speaker attribution example](docs/spkatt.png?raw=true "Speaker attribution in parliamentary debates.")
+![Speaker attribution example](doc/spkatt.png?raw=true "Speaker attribution in parliamentary debates.")
 
  
 

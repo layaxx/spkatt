@@ -1,0 +1,171 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "import train from './train.json'\n\nfunction round(value: number, factor=10000){\n    return Math.round(factor * value )/factor\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const allAnnotations = []\n\nfor (const [key, value] of Object.entries(train.default)){\n    allAnnotations.push(...Object.values(value.annotations))\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const realAnnotations = allAnnotations.filter(anno => anno.roles.some(str => str!== \"_\"))\nrealAnnotations.length"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m5533\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "realAnnotations.map(anno => anno.predicate).filter(str => str !== \"speech\")"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "for(const anno of realAnnotations){\n    const beginnings = anno.roles.filter(str => str.startsWith(\"B-\"))\n    if(beginnings.length !== new Set(beginnings).size){\n        console.log(\"duplicate beginnings\", anno, beginnings)\n    }\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const averageLengths = {}\n\nfor (const anno of realAnnotations) {\n  const types = anno.roles.map((str) => str.split(\"-\")[1]).filter(Boolean)\n  const uniqueTypes = new Set(types)\n  for (const type of uniqueTypes) {\n    if (!type) {\n      console.log(\"empty type\", anno, types)\n    }\n    if (!averageLengths[type]) {\n      averageLengths[type] = {\n        count: 0,\n        total: 0,\n      }\n    }\n    const length = types.filter((str) => str === type).length\n    averageLengths[type].count += 1\n    averageLengths[type].total += length\n  }\n}\n\nconst lengthResults = []\nfor (const [name, { total, count }] of Object.entries(averageLengths)) {\n  lengthResults.push({ name, averageLength: round(total / count) })\n}\n\nconsole.table(lengthResults)\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "┌─────────┬────────────┬───────────────┐",
+                                "│ (index) │    name    │ averageLength │",
+                                "├─────────┼────────────┼───────────────┤",
+                                "│    0    │   'Addr'   │    2.8937     │",
+                                "│    1    │  'Source'  │    1.6625     │",
+                                "│    2    │    'V'     │    1.0942     │",
+                                "│    3    │ 'Message'  │    8.5053     │",
+                                "│    4    │  'Medium'  │    3.2456     │",
+                                "│    5    │  'Topic'   │    5.0975     │",
+                                "│    6    │ 'Evidence' │    4.3544     │",
+                                "│    7    │   'PTC'    │    1.0192     │",
+                                "└─────────┴────────────┴───────────────┘",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const averageDistances = {}\n\nfor (const anno of realAnnotations) {\n  const beginnings = anno.roles.filter((str) => str.startsWith(\"B\"))\n\n  for (let firstIndex = 0; firstIndex < beginnings.length; firstIndex++) {\n    const begin = beginnings[firstIndex]\n    for (let secondIndex = firstIndex+1; secondIndex < beginnings.length; secondIndex++) {\n        const other = beginnings[secondIndex]\n      if (begin !== other) {\n        const distance =   anno.roles.indexOf(other) - anno.roles.indexOf(begin)\n        \n\n        const key = begin + \"-\" + other\n        if (!averageDistances[key]) {\n          averageDistances[key] = {\n            count: 0,\n            total: 0,\n          }\n        }\n        averageDistances[key].count += 1\n        averageDistances[key].total += distance\n      }\n      else{\n        throw new Error(\"not supposed to happen\")\n      }\n    }\n  }\n}\n\nconst results = []\nfor (const [name, { total, count }] of Object.entries(averageDistances)) {\n  results.push({name, averageDistance: round(total / count) , count})\n}\n\nconsole.table(results)\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "┌─────────┬────────────────────────┬─────────────────┬───────┐",
+                                "│ (index) │          name          │ averageDistance │ count │",
+                                "├─────────┼────────────────────────┼─────────────────┼───────┤",
+                                "│    0    │   'B-Addr-B-Source'    │        4        │  42   │",
+                                "│    1    │      'B-Addr-B-V'      │     4.7732      │  291  │",
+                                "│    2    │   'B-Addr-B-Message'   │     4.7786      │  271  │",
+                                "│    3    │     'B-Source-B-V'     │     4.4482      │ 2751  │",
+                                "│    4    │  'B-Source-B-Message'  │     5.0644      │ 1973  │",
+                                "│    5    │    'B-V-B-Message'     │     3.0788      │ 1954  │",
+                                "│    6    │    'B-Message-B-V'     │     4.5777      │ 1267  │",
+                                "│    7    │  'B-Source-B-Medium'   │     3.8382      │  68   │",
+                                "│    8    │  'B-Medium-B-Message'  │     6.0079      │  126  │",
+                                "│    9    │     'B-Medium-B-V'     │     4.5229      │  153  │",
+                                "│   10    │   'B-Source-B-Topic'   │     3.8367      │  441  │",
+                                "│   11    │     'B-V-B-Topic'      │     1.9763      │  380  │",
+                                "│   12    │  'B-Topic-B-Message'   │     4.6703      │  185  │",
+                                "│   13    │  'B-Message-B-Source'  │     3.0934      │  396  │",
+                                "│   14    │   'B-Topic-B-Source'   │     3.0759      │  145  │",
+                                "│   15    │     'B-Topic-B-V'      │     4.9121      │  512  │",
+                                "│   16    │     'B-V-B-Source'     │     1.1489      │  665  │",
+                                "│   17    │    'B-V-B-Evidence'    │     1.4737      │  19   │",
+                                "│   18    │ 'B-Evidence-B-Message' │     7.5313      │  64   │",
+                                "│   19    │   'B-Source-B-Addr'    │      3.073      │  315  │",
+                                "│   20    │   'B-Message-B-PTC'    │     4.7045      │  88   │",
+                                "│   21    │      'B-V-B-PTC'       │     3.2338      │  231  │",
+                                "│   22    │    'B-Source-B-PTC'    │     3.5695      │  295  │",
+                                "│   23    │  'B-Message-B-Topic'   │     5.1136      │  44   │",
+                                "│   24    │   'B-Addr-B-Medium'    │       3.6       │  15   │",
+                                "│   25    │     'B-V-B-Medium'     │       2.4       │  75   │",
+                                "│   26    │      'B-V-B-Addr'      │     1.5991      │  217  │",
+                                "│   27    │    'B-Evidence-B-V'    │     5.7667      │  60   │",
+                                "│   28    │      'B-PTC-B-V'       │     4.5672      │  134  │",
+                                "│   29    │   'B-PTC-B-Message'    │     3.3242      │  182  │",
+                                "│   30    │    'B-Topic-B-PTC'     │     4.4138      │  29   │",
+                                "│   31    │    'B-PTC-B-Source'    │     1.1429      │  21   │",
+                                "│   32    │     'B-Addr-B-PTC'     │     2.8462      │  26   │",
+                                "│   33    │    'B-Addr-B-Topic'    │     3.2727      │  22   │",
+                                "│   34    │    'B-Medium-B-PTC'    │     5.5714      │  14   │",
+                                "│   35    │  'B-Medium-B-Source'   │     3.4706      │  17   │",
+                                "│   36    │   'B-Message-B-Addr'   │        3        │  64   │",
+                                "│   37    │    'B-Topic-B-Addr'    │     5.6667      │  15   │",
+                                "│   38    │    'B-PTC-B-Topic'     │     2.7059      │  34   │",
+                                "│   39    │   'B-Medium-B-Addr'    │       2.3       │  10   │",
+                                "│   40    │   'B-Topic-B-Medium'   │        5        │  10   │",
+                                "│   41    │   'B-Medium-B-Topic'   │       3.8       │  10   │",
+                                "│   42    │  'B-Message-B-Medium'  │      4.186      │  43   │",
+                                "│   43    │ 'B-Message-B-Evidence' │      3.25       │  12   │",
+                                "│   44    │   'B-Evidence-B-PTC'   │      7.25       │   4   │",
+                                "│   45    │ 'B-Source-B-Evidence'  │     4.1667      │   6   │",
+                                "│   46    │ 'B-Evidence-B-Source'  │     5.6667      │   3   │",
+                                "│   47    │    'B-PTC-B-Medium'    │     2.6667      │   3   │",
+                                "│   48    │  'B-Addr-B-Evidence'   │        2        │   1   │",
+                                "│   49    │     'B-PTC-B-Addr'     │        3        │   3   │",
+                                "│   50    │   'B-PTC-B-Evidence'   │        2        │   1   │",
+                                "└─────────┴────────────────────────┴─────────────────┴───────┘",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

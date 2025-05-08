@@ -3,7 +3,7 @@
         {
             "language": "typescript",
             "source": [
-                "import train from './train.json'\n\nfunction round(value: number, factor=10000){\n    return Math.round(factor * value )/factor\n}"
+                "import train from './train.json'\nimport fs from \"fs\"\n\nfunction round(value: number, factor=10000){\n    return Math.round(factor * value )/factor\n}\n\nfunction writeAsCSV(filename: string, data: Array<Record<string, string|number>>){\n    const keys = Object.keys(data[0])\nconst delimiter = \";\"\n\n    let output = keys.join(delimiter)+\"\\n\"\n\n    for(const entry of data){\n        output += keys.map(key => {\n            if(!key in entry){\n                throw new Error(key + \"was not found in \" + entry)\n            }\n            return entry[key]\n        }).join(delimiter) + \"\\n\"\n    }\n\n    fs.writeFileSync(filename, output)\n\n}"
             ],
             "outputs": []
         },
@@ -60,7 +60,7 @@
         {
             "language": "typescript",
             "source": [
-                "const averageLengths = {}\n\nfor (const anno of realAnnotations) {\n  const types = anno.roles.map((str) => str.split(\"-\")[1]).filter(Boolean)\n  const uniqueTypes = new Set(types)\n  for (const type of uniqueTypes) {\n    if (!type) {\n      console.log(\"empty type\", anno, types)\n    }\n    if (!averageLengths[type]) {\n      averageLengths[type] = {\n        count: 0,\n        total: 0,\n      }\n    }\n    const length = types.filter((str) => str === type).length\n    averageLengths[type].count += 1\n    averageLengths[type].total += length\n  }\n}\n\nconst lengthResults = []\nfor (const [name, { total, count }] of Object.entries(averageLengths)) {\n  lengthResults.push({ name, averageLength: round(total / count) })\n}\n\nconsole.table(lengthResults)\n"
+                "const averageLengths = {}\n\nfor (const anno of realAnnotations) {\n  const types = anno.roles.map((str) => str.split(\"-\")[1]).filter(Boolean)\n  const uniqueTypes = new Set(types)\n  for (const type of uniqueTypes) {\n    if (!type) {\n      console.log(\"empty type\", anno, types)\n    }\n    if (!averageLengths[type]) {\n      averageLengths[type] = {\n        count: 0,\n        total: 0,\n      }\n    }\n    const length = types.filter((str) => str === type).length\n    averageLengths[type].count += 1\n    averageLengths[type].total += length\n  }\n}\n\nconst lengthResults = []\nfor (const [name, { total, count }] of Object.entries(averageLengths)) {\n  lengthResults.push({ name, averageLength: round(total / count) })\n}\n\nwriteAsCSV(\"averageLength.csv\",lengthResults)\nconsole.table(lengthResults)\n"
             ],
             "outputs": [
                 {
@@ -90,7 +90,7 @@
         {
             "language": "typescript",
             "source": [
-                "const averageDistances = {}\n\nfor (const anno of realAnnotations) {\n  const beginnings = anno.roles.filter((str) => str.startsWith(\"B\"))\n\n  for (let firstIndex = 0; firstIndex < beginnings.length; firstIndex++) {\n    const begin = beginnings[firstIndex]\n    for (let secondIndex = firstIndex+1; secondIndex < beginnings.length; secondIndex++) {\n        const other = beginnings[secondIndex]\n      if (begin !== other) {\n        const distance =   anno.roles.indexOf(other) - anno.roles.indexOf(begin)\n        \n\n        const key = begin + \"-\" + other\n        if (!averageDistances[key]) {\n          averageDistances[key] = {\n            count: 0,\n            total: 0,\n          }\n        }\n        averageDistances[key].count += 1\n        averageDistances[key].total += distance\n      }\n      else{\n        throw new Error(\"not supposed to happen\")\n      }\n    }\n  }\n}\n\nconst results = []\nfor (const [name, { total, count }] of Object.entries(averageDistances)) {\n  results.push({name, averageDistance: round(total / count) , count})\n}\n\nconsole.table(results)\n"
+                "const averageDistances = {}\n\nfor (const anno of realAnnotations) {\n  const beginnings = anno.roles.filter((str) => str.startsWith(\"B\"))\n\n  for (let firstIndex = 0; firstIndex < beginnings.length; firstIndex++) {\n    const begin = beginnings[firstIndex]\n    for (let secondIndex = firstIndex+1; secondIndex < beginnings.length; secondIndex++) {\n        const other = beginnings[secondIndex]\n      if (begin !== other) {\n        const distance =   anno.roles.indexOf(other) - anno.roles.indexOf(begin)\n        \n\n        const key = begin + \"-\" + other\n        if (!averageDistances[key]) {\n          averageDistances[key] = {\n            count: 0,\n            total: 0,\n          }\n        }\n        averageDistances[key].count += 1\n        averageDistances[key].total += distance\n      }\n      else{\n        throw new Error(\"not supposed to happen\")\n      }\n    }\n  }\n}\n\nconst results = []\nfor (const [name, { total, count }] of Object.entries(averageDistances)) {\n  results.push({name, averageDistance: round(total / count) , count})\n}\n\n\nwriteAsCSV(\"averageDistances.csv\",results)\nconsole.table(results)\n"
             ],
             "outputs": [
                 {

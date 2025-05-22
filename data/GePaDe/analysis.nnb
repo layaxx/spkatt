@@ -10,9 +10,29 @@
         {
             "language": "typescript",
             "source": [
-                "const allAnnotations = []\n\nfor (const [key, value] of Object.entries(train.default)){\n    allAnnotations.push(...Object.values(value.annotations))\n}"
+                "const allAnnotations = []\n\nfor (const [key, value] of Object.entries(train.default)){\n    allAnnotations.push(...Object.values(value.annotations))\n}\n\nconst allRolesSorted = new Array(...new Set(allAnnotations.flatMap(anno => anno.roles.filter(s => s.startsWith(\"B-\"))))).sort()\nallRolesSorted\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  \u001b[32m'B-Addr'\u001b[39m,",
+                                "  \u001b[32m'B-Evidence'\u001b[39m,",
+                                "  \u001b[32m'B-Medium'\u001b[39m,",
+                                "  \u001b[32m'B-Message'\u001b[39m,",
+                                "  \u001b[32m'B-PTC'\u001b[39m,",
+                                "  \u001b[32m'B-Source'\u001b[39m,",
+                                "  \u001b[32m'B-Topic'\u001b[39m,",
+                                "  \u001b[32m'B-V'\u001b[39m",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "typescript",
@@ -153,6 +173,36 @@
                                 "│   49    │     'B-PTC-B-Addr'     │        3        │   3   │",
                                 "│   50    │   'B-PTC-B-Evidence'   │        2        │   1   │",
                                 "└─────────┴────────────────────────┴─────────────────┴───────┘",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const cooccurrences = {count: [], totalDistance: []}\n\nfor(const role1 of allRolesSorted){\n  cooccurrences.count[role1] = []\n  cooccurrences.totalDistance[role1] = []\n  for(const role2 of allRolesSorted){\n    cooccurrences.count[role1][role2] = 0\n    cooccurrences.totalDistance[role1][role2] = 0\n  }\n}\n\nfor (const anno of realAnnotations) {\n  const beginnings = anno.roles.filter((str) => str.startsWith(\"B\"))\n\n  for (let firstIndex = 0; firstIndex < beginnings.length; firstIndex++) {\n    const begin = beginnings[firstIndex]\n    for (let secondIndex = firstIndex+1; secondIndex < beginnings.length; secondIndex++) {\n        const other = beginnings[secondIndex]\n      if (begin !== other) {\n        const distance =   anno.roles.indexOf(other) - anno.roles.indexOf(begin)\n        \n\n\n        cooccurrences.count[begin][other] += 1\n        cooccurrences.totalDistance[begin][other] += distance\n      }\n      else{\n        throw new Error(\"not supposed to happen\")\n      }\n    }\n  }\n}\n\n\n\nconsole.table(cooccurrences.count)\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "┌────────────┬────────┬────────────┬──────────┬───────────┬───────┬──────────┬─────────┬──────┐",
+                                "│  (index)   │ B-Addr │ B-Evidence │ B-Medium │ B-Message │ B-PTC │ B-Source │ B-Topic │ B-V  │",
+                                "├────────────┼────────┼────────────┼──────────┼───────────┼───────┼──────────┼─────────┼──────┤",
+                                "│   B-Addr   │   0    │     1      │    15    │    271    │  26   │    42    │   22    │ 291  │",
+                                "│ B-Evidence │   0    │     0      │    0     │    64     │   4   │    3     │    0    │  60  │",
+                                "│  B-Medium  │   10   │     0      │    0     │    126    │  14   │    17    │   10    │ 153  │",
+                                "│ B-Message  │   64   │     12     │    43    │     0     │  88   │   396    │   44    │ 1267 │",
+                                "│   B-PTC    │   3    │     1      │    3     │    182    │   0   │    21    │   34    │ 134  │",
+                                "│  B-Source  │  315   │     6      │    68    │   1973    │  295  │    0     │   441   │ 2751 │",
+                                "│  B-Topic   │   15   │     0      │    10    │    185    │  29   │   145    │    0    │ 512  │",
+                                "│    B-V     │  217   │     19     │    75    │   1954    │  231  │   665    │   380   │  0   │",
+                                "└────────────┴────────┴────────────┴──────────┴───────────┴───────┴──────────┴─────────┴──────┘",
                                 ""
                             ]
                         }

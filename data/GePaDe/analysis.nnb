@@ -3,7 +3,7 @@
         {
             "language": "typescript",
             "source": [
-                "import train from './train.json'\nimport fs from \"fs\"\n\nfunction round(value: number, factor=10000){\n    return Math.round(factor * value )/factor\n}\n\nfunction writeAsCSV(filename: string, data: Array<Record<string, string|number>>){\n    const keys = Object.keys(data[0])\nconst delimiter = \";\"\n\n    let output = keys.join(delimiter)+\"\\n\"\n\n    for(const entry of data){\n        output += keys.map(key => {\n            if(!key in entry){\n                throw new Error(key + \"was not found in \" + entry)\n            }\n            return entry[key]\n        }).join(delimiter) + \"\\n\"\n    }\n\n    fs.writeFileSync(filename, output)\n\n}"
+                "import train from './train.json'\nimport fs from \"fs\"\nconst { Plotly } = require('node-kernel');\n\nfunction round(value: number, factor=10000){\n    return Math.round(factor * value )/factor\n}\n\nfunction writeAsCSV(filename: string, data: Array<Record<string, string|number>>){\n    const keys = Object.keys(data[0])\nconst delimiter = \";\"\n\n    let output = keys.join(delimiter)+\"\\n\"\n\n    for(const entry of data){\n        output += keys.map(key => {\n            if(!key in entry){\n                throw new Error(key + \"was not found in \" + entry)\n            }\n            return entry[key]\n        }).join(delimiter) + \"\\n\"\n    }\n\n    fs.writeFileSync(filename, output)\n\n}"
             ],
             "outputs": []
         },
@@ -183,7 +183,7 @@
         {
             "language": "typescript",
             "source": [
-                "const cooccurrences = {count: [], totalDistance: []}\n\nfor(const role1 of allRolesSorted){\n  cooccurrences.count[role1] = []\n  cooccurrences.totalDistance[role1] = []\n  for(const role2 of allRolesSorted){\n    cooccurrences.count[role1][role2] = 0\n    cooccurrences.totalDistance[role1][role2] = 0\n  }\n}\n\nfor (const anno of realAnnotations) {\n  const beginnings = anno.roles.filter((str) => str.startsWith(\"B\"))\n\n  for (let firstIndex = 0; firstIndex < beginnings.length; firstIndex++) {\n    const begin = beginnings[firstIndex]\n    for (let secondIndex = firstIndex+1; secondIndex < beginnings.length; secondIndex++) {\n        const other = beginnings[secondIndex]\n      if (begin !== other) {\n        const distance =   anno.roles.indexOf(other) - anno.roles.indexOf(begin)\n        \n\n\n        cooccurrences.count[begin][other] += 1\n        cooccurrences.totalDistance[begin][other] += distance\n      }\n      else{\n        throw new Error(\"not supposed to happen\")\n      }\n    }\n  }\n}\n\n\n\nconsole.table(cooccurrences.count)\n"
+                "const cooccurrences = {count: [], totalDistance: []}\n\nconst zDataCount = []\n\nfor(const role1 of allRolesSorted){\n  cooccurrences.count[role1] = []\n  cooccurrences.totalDistance[role1] = []\n  for(const role2 of allRolesSorted){\n    cooccurrences.count[role1][role2] = 0\n    cooccurrences.totalDistance[role1][role2] = 0\n  }\n}\n\nfor (const anno of realAnnotations) {\n  const beginnings = anno.roles.filter((str) => str.startsWith(\"B\"))\n\n  for (let firstIndex = 0; firstIndex < beginnings.length; firstIndex++) {\n    const begin = beginnings[firstIndex]\n    for (let secondIndex = firstIndex+1; secondIndex < beginnings.length; secondIndex++) {\n        const other = beginnings[secondIndex]\n      if (begin !== other) {\n        const distance =   anno.roles.indexOf(other) - anno.roles.indexOf(begin)\n        \n        const beginIndex = allRolesSorted.indexOf(begin)\n        const otherIndex = allRolesSorted.indexOf(other) \n        if(!zDataCount[beginIndex]){\n          zDataCount[beginIndex] = []\n        }\n        if(!zDataCount[beginIndex][otherIndex]){\n          zDataCount[beginIndex][otherIndex] = 0\n        }\n\n        cooccurrences.count[begin][other] += 1\n        zDataCount[beginIndex][allRolesSorted.indexOf(other)] += 1\n        cooccurrences.totalDistance[begin][other] += distance\n      }\n      else{\n        throw new Error(\"not supposed to happen\")\n      }\n    }\n  }\n}\n\n\n\nconsole.table(cooccurrences.count)\n"
             ],
             "outputs": [
                 {
@@ -205,6 +205,266 @@
                                 "└────────────┴────────┴────────────┴──────────┴───────────┴───────┴──────────┴─────────┴──────┘",
                                 ""
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "\nvar data = [\n  {\n    z: zDataCount,\n    x: allRolesSorted, \n    y: allRolesSorted, \n    type: 'heatmap'\n  }\n];\nconst layout = {\n    height: 400,\n    width: 500\n};\n\nPlotly.newPlot('myDiv', data, layout);\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.ts.notebook.plotly+json",
+                            "value": {
+                                "requestId": "x4f9dc85ea2394687b5ea0624f6ed9a8a",
+                                "type": "generatePlot",
+                                "ele": "myDiv",
+                                "data": [
+                                    {
+                                        "z": [
+                                            [
+                                                null,
+                                                1,
+                                                15,
+                                                271,
+                                                26,
+                                                42,
+                                                22,
+                                                291
+                                            ],
+                                            [
+                                                null,
+                                                null,
+                                                null,
+                                                64,
+                                                4,
+                                                3,
+                                                null,
+                                                60
+                                            ],
+                                            [
+                                                10,
+                                                null,
+                                                null,
+                                                126,
+                                                14,
+                                                17,
+                                                10,
+                                                153
+                                            ],
+                                            [
+                                                64,
+                                                12,
+                                                43,
+                                                null,
+                                                88,
+                                                396,
+                                                44,
+                                                1267
+                                            ],
+                                            [
+                                                3,
+                                                1,
+                                                3,
+                                                182,
+                                                null,
+                                                21,
+                                                34,
+                                                134
+                                            ],
+                                            [
+                                                315,
+                                                6,
+                                                68,
+                                                1973,
+                                                295,
+                                                null,
+                                                441,
+                                                2751
+                                            ],
+                                            [
+                                                15,
+                                                null,
+                                                10,
+                                                185,
+                                                29,
+                                                145,
+                                                null,
+                                                512
+                                            ],
+                                            [
+                                                217,
+                                                19,
+                                                75,
+                                                1954,
+                                                231,
+                                                665,
+                                                380
+                                            ]
+                                        ],
+                                        "x": [
+                                            "B-Addr",
+                                            "B-Evidence",
+                                            "B-Medium",
+                                            "B-Message",
+                                            "B-PTC",
+                                            "B-Source",
+                                            "B-Topic",
+                                            "B-V"
+                                        ],
+                                        "y": [
+                                            "B-Addr",
+                                            "B-Evidence",
+                                            "B-Medium",
+                                            "B-Message",
+                                            "B-PTC",
+                                            "B-Source",
+                                            "B-Topic",
+                                            "B-V"
+                                        ],
+                                        "type": "heatmap"
+                                    }
+                                ],
+                                "layout": {
+                                    "height": 400,
+                                    "width": 500
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "\nvar data = [\n  {\n    z: zDataCount.map(x => x.map(y => Math.log2(y))),\n    x: allRolesSorted, \n    y: allRolesSorted, \n    type: 'heatmap'\n  }\n];\nconst layout = {\n    height: 400,\n    width: 500\n};\n\nPlotly.newPlot('myDiv', data, layout);\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.ts.notebook.plotly+json",
+                            "value": {
+                                "requestId": "xf86693f7ddce4098b0b68209c0ce562b",
+                                "type": "generatePlot",
+                                "ele": "myDiv",
+                                "data": [
+                                    {
+                                        "z": [
+                                            [
+                                                null,
+                                                0,
+                                                3.9068905956085187,
+                                                8.08214904135387,
+                                                4.700439718141092,
+                                                5.392317422778761,
+                                                4.459431618637297,
+                                                8.184875342908283
+                                            ],
+                                            [
+                                                null,
+                                                null,
+                                                null,
+                                                6,
+                                                2,
+                                                1.584962500721156,
+                                                null,
+                                                5.906890595608519
+                                            ],
+                                            [
+                                                3.321928094887362,
+                                                null,
+                                                null,
+                                                6.977279923499917,
+                                                3.807354922057604,
+                                                4.087462841250339,
+                                                3.321928094887362,
+                                                7.257387842692652
+                                            ],
+                                            [
+                                                6,
+                                                3.584962500721156,
+                                                5.426264754702098,
+                                                null,
+                                                6.459431618637297,
+                                                8.62935662007961,
+                                                5.459431618637297,
+                                                10.30720080914081
+                                            ],
+                                            [
+                                                1.584962500721156,
+                                                0,
+                                                1.584962500721156,
+                                                7.507794640198696,
+                                                null,
+                                                4.392317422778761,
+                                                5.087462841250339,
+                                                7.066089190457772
+                                            ],
+                                            [
+                                                8.29920801838728,
+                                                2.584962500721156,
+                                                6.087462841250339,
+                                                10.946175240723559,
+                                                8.204571144249204,
+                                                null,
+                                                8.784634845557521,
+                                                11.42574042431621
+                                            ],
+                                            [
+                                                3.9068905956085187,
+                                                null,
+                                                3.321928094887362,
+                                                7.531381460516312,
+                                                4.857980995127572,
+                                                7.1799090900149345,
+                                                null,
+                                                9
+                                            ],
+                                            [
+                                                7.7615512324444795,
+                                                4.247927513443585,
+                                                6.22881869049588,
+                                                10.932214751968385,
+                                                7.851749041416057,
+                                                9.377210530388552,
+                                                8.569855608330949
+                                            ]
+                                        ],
+                                        "x": [
+                                            "B-Addr",
+                                            "B-Evidence",
+                                            "B-Medium",
+                                            "B-Message",
+                                            "B-PTC",
+                                            "B-Source",
+                                            "B-Topic",
+                                            "B-V"
+                                        ],
+                                        "y": [
+                                            "B-Addr",
+                                            "B-Evidence",
+                                            "B-Medium",
+                                            "B-Message",
+                                            "B-PTC",
+                                            "B-Source",
+                                            "B-Topic",
+                                            "B-V"
+                                        ],
+                                        "type": "heatmap"
+                                    }
+                                ],
+                                "layout": {
+                                    "height": 400,
+                                    "width": 500
+                                }
+                            }
                         }
                     ]
                 }
